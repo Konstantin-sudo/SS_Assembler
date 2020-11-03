@@ -1,0 +1,33 @@
+
+//--------------------------------------------SECTION HEADER TABLE--------------------------------------------\\
+
+INDEX               NAME                TYPE                ADDRESS             SIZE                ENTRY SIZE          
+0                                       SHT_NULL            0x0                 0x0                 0x0                 
+1                   symtab              SHT_SYMTAB          0x0                 0x2a0               0x60                
+2                   .data               SHT_PROGBITS        0x0                 0x18                0x0                 
+3                   .bss                SHT_NOBITS          0x0                 0xc                 0x0                 
+
+
+
+//------------------------------------------------------SYMBOL TABLE------------------------------------------------------\\
+
+INDEX          NAME           VALUE          SECTION        INFO           DEFINED        SIZE           FLINK(Offset/Section)
+0              UND            n/a            0              local          false          n/a            null           
+1              .data          0x0            1              local          true           0x18           null           
+2              .bss           0x0            2              local          true           0xc            null           
+3              c              0x2            2              local          true           n/a            null           
+4              b              n/a            0              extern         false          n/a            null           
+5              a1             0x12           1              global         true           n/a            null           
+6              a              0xa            1              global         true           n/a            null           
+
+
+
+//-----------------------------SECTION .data-----------------------------\\
+
+00 00 00 00 00 00 00 00 00 00 08 f4 cb 00 00 00 00 00 c4 1f 92 0c f4 ff 
+
+
+//----------TNS TABLE----------\\
+
+SYMBOL NAME         EXPRESSION          
+

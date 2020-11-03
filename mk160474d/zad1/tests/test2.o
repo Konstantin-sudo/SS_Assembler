@@ -1,0 +1,62 @@
+
+//--------------------------------------------SECTION HEADER TABLE--------------------------------------------\\
+
+INDEX               NAME                TYPE                ADDRESS             SIZE                ENTRY SIZE          
+0                                       SHT_NULL            0x0                 0x0                 0x0                 
+1                   symtab              SHT_SYMTAB          0x0                 0x3c0               0x60                
+2                   .data               SHT_PROGBITS        0x0                 0x1c                0x0                 
+3                   .rel .data          SHT_REL             0x0                 0x20                0x10                
+4                   .bss                SHT_NOBITS          0x0                 0xc                 0x0                 
+5                   .rel .moja_sekcija  SHT_REL             0x0                 0x50                0x10                
+6                   .moja_sekcija       SHT_PROGBITS        0x0                 0xf                 0x0                 
+
+
+
+//------------------------------------------------------SYMBOL TABLE------------------------------------------------------\\
+
+INDEX          NAME           VALUE          SECTION        INFO           DEFINED        SIZE           FLINK(Offset/Section)
+0              UND            n/a            0              local          false          n/a            null           
+1              .data          0x0            1              local          true           0x1c           null           
+2              .bss           0x0            2              local          true           0xc            null           
+3              .moja_sekcija  0x0            3              local          true           0xf            null           
+4              e              0xd            3              local          true           n/a            0x9/.moja_sekcija
+5              d              0xc            3              global         true           n/a            0x7/.moja_sekcija
+6              c              0x2            2              local          true           n/a            0x1a/.data     
+7              b              n/a            0              extern         false          n/a            null           
+8              a1             0x12           1              global         true           n/a            null           
+9              a              0xa            1              global         true           n/a            null           
+
+
+
+//---------RELOCATION TABLE .rel .data---------\\
+
+R_OFFSET            R_TYPE              R_INFO              
+0x18                R_16                1                   
+0x1a                R_16                2                   
+
+
+//---------RELOCATION TABLE .rel .moja_sekcija---------\\
+
+R_OFFSET            R_TYPE              R_INFO              
+0x0                 R_16                9                   
+0x2                 R_16                7                   
+0x4                 R_16                2                   
+0x7                 R_16                5                   
+0x9                 R_16                3                   
+
+
+//-----------------------------SECTION .data-----------------------------\\
+
+00 00 00 00 00 00 00 00 00 00 08 f4 cb 00 00 00 00 00 c4 1f 92 0c f4 ff 00 
+00 02 00 
+
+
+//-----------------------------SECTION .moja_sekcija-----------------------------\\
+
+00 00 00 00 02 00 d3 00 00 0d 00 00 f8 cf 4c 
+
+
+//----------TNS TABLE----------\\
+
+SYMBOL NAME         EXPRESSION          
+
